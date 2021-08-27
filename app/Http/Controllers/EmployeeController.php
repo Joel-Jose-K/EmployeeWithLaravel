@@ -142,7 +142,7 @@ class EmployeeController extends Controller
 
         $this->repository->update($request, $id);        
 
-        return redirect('employee/'.$id.'/edit')->with('msg', 'Employee data updated successfully.');
+        return redirect('employee')->with('msg', 'Employee data updated successfully.');
     }
 
     /**

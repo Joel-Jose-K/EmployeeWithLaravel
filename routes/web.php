@@ -29,13 +29,13 @@ Route::get('logout', function ()
 
 // Department Resource
 Route::get('/depart/{id}/delete', 'App\Http\Controllers\DepartmentController@destroy');
-Route::resource('/depart', 'App\Http\Controllers\DepartmentController');
+Route::resource('/depart', 'App\Http\Controllers\DepartmentController')->middleware('auth');
 
 // Designation Resource
 Route::get('/designation/{id}/delete', 'App\Http\Controllers\DesignationController@destroy');
-Route::resource('/designation', 'App\Http\Controllers\DesignationController');
+Route::resource('/designation', 'App\Http\Controllers\DesignationController')->middleware('auth');
 
 // Employee Resource
 Route::get('/employee/{id}/delete', 'App\Http\Controllers\EmployeeController@destroy');
-Route::resource('/employee', 'App\Http\Controllers\EmployeeController');
+Route::resource('/employee', 'App\Http\Controllers\EmployeeController')->middleware('auth');
 
