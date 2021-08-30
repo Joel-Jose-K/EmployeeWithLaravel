@@ -20,9 +20,9 @@ class CreateEmployeesTable extends Migration
             $table->string('email');
             $table->string('password');
             $table->unsignedBigInteger('department_id');
-            $table->foreign('department_id')->references('id')->on('departments');
+            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('designation_id');
-            $table->foreign('designation_id')->references('id')->on('designations');
+            $table->foreign('designation_id')->references('id')->on('designations')->onDelete('cascade')->onUpdate('cascade');
             $table->string('photo')->nullable();
             $table->string('address', 150)->nullable();
             $table->string('mobile');

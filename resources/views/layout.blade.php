@@ -93,7 +93,7 @@
                with font-awesome or any other icon font library -->
           
           <!-- Department -->
-          <li class="nav-item menu-open">
+          <li class="nav-item menu-close">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
@@ -120,7 +120,7 @@
           </li>
           <!-- Department ends -->
           <!-- Designation -->
-          <li class="nav-item menu-open">
+          <li class="nav-item menu-close">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
@@ -147,7 +147,7 @@
           </li>
           <!-- Designation ends -->
           <!-- Employee -->
-          <li class="nav-item menu-open">
+          <li class="nav-item menu-close">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-users"></i>
               <p>

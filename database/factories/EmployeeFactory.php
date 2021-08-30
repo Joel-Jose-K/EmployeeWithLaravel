@@ -3,6 +3,9 @@
 namespace Database\Factories;
 
 use App\Models\Employee;
+use App\Models\Department;
+use App\Models\Designation;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class EmployeeFactory extends Factory
@@ -26,8 +29,8 @@ class EmployeeFactory extends Factory
             'last_name' => $this->faker->name,
             'email' => $this->faker->email,
             'password' => $this->faker->password,
-            'department_id' => rand(1,2),
-            'designation_id' => rand(2,3),
+            'department_id' => Department::all()->random()->id,
+            'designation_id' => Designation::all()->random()->id,
             'photo' => 'https://source.unsplash.com/random',
             'address' => $this->faker->address,
             'mobile' => $this->faker->phoneNumber,
