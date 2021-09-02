@@ -36,9 +36,9 @@ Route::get('/designation/{id}/delete', 'App\Http\Controllers\DesignationControll
 Route::resource('/designation', 'App\Http\Controllers\DesignationController')->middleware('auth');
 
 // Employee Resource
-Route::get('/employee/export', 'App\Http\Controllers\EmployeeController@export');
-Route::get('/import-form', 'App\Http\Controllers\EmployeeController@importForm');
-Route::post('/import', 'App\Http\Controllers\EmployeeController@import')->name('employee.import');
+Route::get('/employee/export', 'App\Http\Controllers\EmployeeController@export')->middleware('auth');;
+Route::get('/import-form', 'App\Http\Controllers\EmployeeController@importForm')->middleware('auth');;
+Route::post('/import', 'App\Http\Controllers\EmployeeController@import')->name('employee.import')->middleware('auth');;
 
 Route::get('/employee/{id}/delete', 'App\Http\Controllers\EmployeeController@destroy');
 Route::resource('/employee', 'App\Http\Controllers\EmployeeController')->middleware('auth');
