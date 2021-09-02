@@ -7,6 +7,11 @@
 @section('content')
 
 <a href="{{ url('employee/create') }}" class="btn btn-primary" >Add New</a>
+
+<a href="{{ url('employee/export') }}" class="btn btn-primary">Export</a>
+
+<a href="{{ url('import-form') }}" class="btn btn-primary">Import</a>
+
     <div class="card-body">
         @if(Session::has('msg'))
             <p class="alert alert-success">{{ session('msg') }}</p>

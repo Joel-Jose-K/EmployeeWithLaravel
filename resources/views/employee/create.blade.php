@@ -25,23 +25,23 @@
         <form action="{{ url('employee') }}" method="post" enctype="multipart/form-data" id="createForm">
             @csrf
             <div class="">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>First Name <span class="text-danger">*</span></label>
                     <input type="text" name="first_name" class="form-control" value="{{ old('first_name') }}">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Last Name <span class="text-danger">*</span></label>
                     <input type="text" name="last_name" class="form-control" value="{{ old('last_name') }}">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Email <span class="text-danger">*</span></label>
                     <input type="email" name="email" class="form-control" value="{{ old('email') }}">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Password <span class="text-danger">*</span></label>
                     <input type="password" name="password" class="form-control">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Department <span class="text-danger">*</span></label>
                     <select name="department" class="form-control">
                         <option value="">-- Select Department --</option>
@@ -50,7 +50,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Designation <span class="text-danger">*</span></label>
                     <select name="designation" class="form-control">
                         <option value="">-- Select Designation --</option>
@@ -59,19 +59,19 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Photo</label>
-                    <input type="file" name="photo" class="form-control">
+                    <input type="file" name="photo" accept="image/*" class="form-control">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Address</label>
                     <input type="text" name="address" class="form-control" value="{{ old('address') }}">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Mobile <span class="text-danger">*</span></label>
                     <input type="text" name="mobile" class="form-control" value="{{ old('mobile') }}">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <button type="submit" value="Submit" class="btn btn-primary">Save</button>
                 </div>
             </div>

@@ -26,23 +26,23 @@
             @method('put')
             @csrf
             <div class="">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6  offset-md-3">
                     <label>First Name <span class="text-danger">*</span></label>
                     <input type="text" value="{{ $data->first_name }}" name="first_name" class="form-control">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Last Name <span class="text-danger">*</span></label>
                     <input type="text" value="{{ $data->last_name }}" name="last_name" class="form-control">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Email <span class="text-danger">*</span></label>
                     <input type="email" value="{{ $data->email }}" name="email" class="form-control">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Password <span class="text-danger">*</span></label>
                     <input type="password" value="" name="password" class="form-control">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Department <span class="text-danger">*</span></label>
                     <select name="department" class="form-control">
                         <option value="">-- Select Department --</option>
@@ -51,7 +51,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Designation <span class="text-danger">*</span></label>
                     <select name="designation" class="form-control">
                         <option value="">-- Select Designation --</option>
@@ -60,7 +60,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Photo</label>
                     <input type="file" name="photo" class="form-control">
                     <p>
@@ -68,15 +68,15 @@
                         <input type="hidden" name="prev_photo" value="{{ $data->photo }}">
                     </p>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Address</label>
                     <input type="text" value="{{ $data->address }}" name="address" class="form-control">
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6 offset-md-3">
                     <label>Mobile <span class="text-danger">*</span></label>
                     <input type="text" value="{{ $data->mobile }}" name="mobile" class="form-control">
                 </div>
-                <div class="form-group col-md-6"> 
+                <div class="form-group col-md-6 offset-md-3"> 
                     <button type="submit" value="Submit" class="btn btn-success">Update</button>
                 </div>
             </div>

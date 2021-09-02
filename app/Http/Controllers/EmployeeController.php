@@ -15,6 +15,10 @@ use App\Repositories\EmployeeRepositoryInterface;
 
 use DataTables;
 
+use App\Exports\EmployeeExport;
+use App\Imports\EmployeeImport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class EmployeeController extends Controller
 {
@@ -156,5 +160,25 @@ class EmployeeController extends Controller
         $this->repository->destroy($id);
 
         return redirect('employee')->with('msg', 'The data was deleted successfully.');
+    }
+
+    public function export()
+    {
+        return Excel::download(new EmployeeExport, 'employees.xlsx');
+    }
+
+    public function importForm()
+    {
+        return view('excel.import-form');
+    }
+
+    public function import(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|mimes:xls,xlsx'
+        ]);
+
+        Excel::import(new EmployeeImport, $request->file);
+        return redirect('import-form')->with('msg', 'Upload successful!');
     }
 }
